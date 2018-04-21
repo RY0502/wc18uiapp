@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  baseurl: 'http:///',
+  nxtfixtureurl: 'getfixtures?match=next'
 };

@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { WcNextMatchComponent } from './wc-next-match/wc-next-match.component';
+import { WcNextMatchService } from './wc-next-match.service';
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WcNextMatchComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    WcNextMatchService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
