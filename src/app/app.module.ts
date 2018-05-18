@@ -7,11 +7,13 @@ import { WcNextMatchComponent } from './wc-next-match/wc-next-match.component';
 import { WcNextMatchService } from './wc-next-match.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { WcnavbarComponent } from './wcnavbar/wcnavbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WcNextMatchComponent
+    WcNextMatchComponent,
+    WcnavbarComponent
   ],
   imports: [
     BrowserModule,
