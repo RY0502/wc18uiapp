@@ -15,11 +15,17 @@ export class WcNextMatchComponent implements OnInit {
   lefthours: number;
   leftminutes: number;
   leftseconds: number;
+  team1: String;
+  team2: String;
 
   constructor(private nextMatchService: WcNextMatchService) { }
 
   getNextMatchDate(): void {
-    this.nextMatchService.getNextMatchDate().subscribe(matchDate => {this.nextmatch = matchDate; this.updateTimer(); });
+    this.nextMatchService.getNextMatchDate().subscribe(data => {
+      this.nextmatch = new Date(data.matchdate);
+      this.team1 = data.teamhome;
+      this.team2 = data.teamaway;
+      this.updateTimer(); });
   }
 
   ngOnInit() {

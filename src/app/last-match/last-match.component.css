@@ -1,0 +1,10 @@
+.teamandscore {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.playedtime {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 15px;
+}

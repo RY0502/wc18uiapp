@@ -6,5 +6,6 @@
 export const environment = {
   production: false,
   baseurl: 'http://localhost:3000/',
-  nxtfixtureurl: 'getfixtures?match=next'
+  nxtfixtureurl: 'getfixtures?match=next',
+  lastfixtureurl: 'getfixtures?match=last'
 };

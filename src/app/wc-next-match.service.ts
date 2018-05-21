@@ -11,13 +11,13 @@ export class WcNextMatchService {
 
   private nextMatchUrl = environment.baseurl + environment.nxtfixtureurl;
 
-  getNextMatchDate(): Observable<Date> {
+  getNextMatchDate(): Observable<any> {
     return this.http.get<any>(this.nextMatchUrl)
       .map(res => {
-      let temp = res[0];
-      temp = temp.matchdate;
+      const temp = res[0];
+      // temp = temp.matchdate;
       console.log('temp value: ' + temp);
-      return new Date(temp);
+      return temp;
     })
       .pipe(catchError(this.handleError('getNextMatchDate', null))
     );

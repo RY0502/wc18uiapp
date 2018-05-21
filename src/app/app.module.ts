@@ -8,19 +8,25 @@ import { WcNextMatchService } from './wc-next-match.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { WcnavbarComponent } from './wcnavbar/wcnavbar.component';
+import { WccarouselComponent } from './wccarousel/wccarousel.component';
+import { LastMatchComponent } from './last-match/last-match.component';
+import { WcLastMatchService } from './wc-last-match.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     WcNextMatchComponent,
-    WcnavbarComponent
+    WcnavbarComponent,
+    WccarouselComponent,
+    LastMatchComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
   providers: [
-    WcNextMatchService
+    WcNextMatchService,
+    WcLastMatchService
   ],
   bootstrap: [AppComponent]
 })

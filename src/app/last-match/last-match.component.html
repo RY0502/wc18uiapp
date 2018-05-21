@@ -1,0 +1,23 @@
+<h1>Last Match </h1>
+<hr>
+<div class = "row">
+    <div class = "col-sm-4">
+    </div>
+        <div class = "teamandscore col-sm-8 mx-auto">  
+            <div class = "row">
+                <div class = "col-sm-7">
+            <img  class = ".img-responsive" src="{{teamHomeImagePath}}" height = "30" width = "40">&nbsp;{{team1}} {{team1Goal}} - 
+        </div>
+        <div class = "col-sm-5 mr-auto">
+                {{team2Goal}}&nbsp;<img class = ".img-responsive" src="{{teamAwayImagePath}}" height = "30" width = "40">&nbsp; {{team2}} 
+        </div>
+    </div>
+        </div>
+</div>
+<div class = "row">
+        <div class = "col-sm-9">
+            </div>
+        <div class = "playedtime col-sm-3 ml-auto">  {{ lastMatchDate | date : "EEEE',' d MMMM yyyy"}} </div>
+</div>        
+<br>
+<br>
