@@ -1,7 +1,7 @@
 .teamnames {
     float: left;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 22px;
 }
 
@@ -21,4 +21,48 @@
         margin-left: 0px !important;
         padding-left: 15px;
     }
+
+    .teamnames {
+        margin-top: 0px !important;
+    }
+
+    .smvsspace {
+        padding-left: 15px !important;
+        margin-left: 15px !important;
+
+    }
+
+    /*.versus {
+        margin-left: 50px !important;
+        margin-top: 10px;
+        margin-top: 10px;
+    }*/
+}
+
+@media (min-width: 768px) {
+
+    .mdvsspace {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .lgteamsp {
+        text-align: right;
+    }
+}
+
+
+
+.norightspace {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
+
+.noleftspace {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
 }

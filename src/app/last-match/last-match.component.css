@@ -8,3 +8,28 @@
     font-style: italic;
     font-size: 15px;
 }
+
+.norightspace {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
+
+.noleftspace {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.nospace {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .text-right {
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+        text-align: left !important;
+    }
+}

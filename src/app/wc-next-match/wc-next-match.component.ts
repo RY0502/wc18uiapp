@@ -17,6 +17,8 @@ export class WcNextMatchComponent implements OnInit {
   leftseconds: number;
   team1: String;
   team2: String;
+  teamHomeImagePath: String;
+  teamAwayImagePath: String;
 
   constructor(private nextMatchService: WcNextMatchService) { }
 
@@ -25,6 +27,21 @@ export class WcNextMatchComponent implements OnInit {
       this.nextmatch = new Date(data.matchdate);
       this.team1 = data.teamhome;
       this.team2 = data.teamaway;
+      const teamHomeflag = data.teamhome.split(' ');
+      let finalName = '';
+      if ( teamHomeflag.length > 1) {
+        finalName = teamHomeflag[0] + '_' + teamHomeflag[1];
+      } else {
+        finalName = teamHomeflag;
+      }
+      this.teamHomeImagePath = '/assets/' + finalName + '.png';
+      const teamAwayflag = data.teamaway.split(' ');
+      if ( teamAwayflag.length > 1) {
+        finalName = teamAwayflag[0] + '_' + teamAwayflag[1];
+      } else {
+        finalName = teamAwayflag;
+      }
+      this.teamAwayImagePath = '/assets/' + finalName + '.png';
       this.updateTimer(); });
   }
 

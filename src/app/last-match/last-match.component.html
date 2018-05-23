@@ -1,23 +1,28 @@
 <h1>Last Match </h1>
 <hr>
 <div class = "row">
-    <div class = "col-sm-4">
-    </div>
-        <div class = "teamandscore col-sm-8 mx-auto">  
+        <div class = "teamandscore col-sm-12 d-sm-none">  
             <div class = "row">
-                <div class = "col-sm-7">
-            <img  class = ".img-responsive" src="{{teamHomeImagePath}}" height = "30" width = "40">&nbsp;{{team1}} {{team1Goal}} - 
+                <div class = "col-sm-6 text-right">
+            <img  class = ".img-responsive" src="{{teamHomeImagePath}}" height = "30" width = "40">&nbsp;
+            {{team1}} {{team1Goal}}
         </div>
-        <div class = "col-sm-5 mr-auto">
-                {{team2Goal}}&nbsp;<img class = ".img-responsive" src="{{teamAwayImagePath}}" height = "30" width = "40">&nbsp; {{team2}} 
+        <div class = "col-sm-6">
+            <img class = ".img-responsive" src="{{teamAwayImagePath}}" height = "30" width = "40">&nbsp; {{team2}} {{team2Goal}}
         </div>
     </div>
         </div>
+        <div class = "teamandscore col-sm-12 d-none d-md-block text-center">  
+                <img  class = ".img-responsive" src="{{teamHomeImagePath}}" height = "30" width = "40">&nbsp;
+                {{team1}} {{team1Goal}} - {{team2Goal}} &nbsp;
+                <img class = ".img-responsive" src="{{teamAwayImagePath}}" height = "30" width = "40">&nbsp;{{team2}}
+        </div> 
 </div>
+<br>
 <div class = "row">
-        <div class = "col-sm-9">
+        <div class = "col-sm-7">
             </div>
-        <div class = "playedtime col-sm-3 ml-auto">  {{ lastMatchDate | date : "EEEE',' d MMMM yyyy"}} </div>
+        <div class = "playedtime col-sm-5 text-right">  {{ lastMatchDate | date : "EEEE',' d MMMM yyyy"}} </div>
 </div>        
 <br>
 <br>
