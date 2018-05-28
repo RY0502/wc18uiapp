@@ -11,6 +11,9 @@ import { WcnavbarComponent } from './wcnavbar/wcnavbar.component';
 import { WccarouselComponent } from './wccarousel/wccarousel.component';
 import { LastMatchComponent } from './last-match/last-match.component';
 import { WcLastMatchService } from './wc-last-match.service';
+import { WcNewsService } from './wc-news.service';
+import { WcVideosComponent } from './wc-videos/wc-videos.component';
+import { WcVideosService } from './wc-videos.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { WcLastMatchService } from './wc-last-match.service';
     WcNextMatchComponent,
     WcnavbarComponent,
     WccarouselComponent,
-    LastMatchComponent
+    LastMatchComponent,
+    WcVideosComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,9 @@ import { WcLastMatchService } from './wc-last-match.service';
   ],
   providers: [
     WcNextMatchService,
-    WcLastMatchService
+    WcLastMatchService,
+    WcNewsService,
+    WcVideosService
   ],
   bootstrap: [AppComponent]
 })

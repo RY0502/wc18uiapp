@@ -7,19 +7,13 @@ import { of } from 'rxjs/observable/of';
 import { environment } from '../environments/environment';
 
 @Injectable()
-export class WcLastMatchService {
+export class WcVideosService {
 
-  private lastMatchUrl = environment.baseurl + environment.lastfixtureurl;
+  private videosUrl = environment.baseurl + environment.trendingvideosurl;
 
-  getLastMatch(): Observable<any> {
-    return this.http.get<any>(this.lastMatchUrl)
-      .map(res => {
-      const temp = res[0];
-      // temp = temp.matchdate;
-      // console.log('temp value: ' + temp);
-      return temp;
-    })
-      .pipe(catchError(this.handleError('getLastMatchDate', null))
+  getTrendingVideos(): Observable<any> {
+    return this.http.get<any>(this.videosUrl)
+      .pipe(catchError(this.handleError('getTrendingVideos', null))
     );
   }
 
@@ -35,4 +29,5 @@ export class WcLastMatchService {
       return of(result as T);
     };
   }
+
 }

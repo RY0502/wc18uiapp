@@ -1,0 +1,35 @@
+/*  @media (max-width: 1200px) {
+    .respimg {
+        max-width: 100%;
+        height: auto;
+    }
+}*/
+
+.myclass {
+    position: relative;
+    left: auto;
+    right: auto;
+    background-color: white;
+    
+}
+ a {
+    color: black;
+    font-weight: 600;
+ }
+
+ .carousel-caption {
+    background-color: #f5f5f0;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .carousel-caption {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 10px;
+    }
+}
+
+/*.carousel-indicators {
+    bottom: 10% !important;
+  }*/

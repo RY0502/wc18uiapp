@@ -16,7 +16,7 @@ export class WcNextMatchService {
       .map(res => {
       const temp = res[0];
       // temp = temp.matchdate;
-      console.log('temp value: ' + temp);
+      // console.log('temp value: ' + temp);
       return temp;
     })
       .pipe(catchError(this.handleError('getNextMatchDate', null))

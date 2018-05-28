@@ -2,21 +2,16 @@
 
     <!-- Indicators -->
     <ul class="carousel-indicators">
-      <li data-target="#demo" data-slide-to="0" class="active"></li>
-      <li data-target="#demo" data-slide-to="1"></li>
-      <li data-target="#demo" data-slide-to="2"></li>
+      <li *ngFor="let newsdetail of news;  let i = index" data-target="#demo" [attr.data-slide-to]="i" [class.active]="i == 0"></li>
     </ul>
   
     <!-- The slideshow -->
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://www.w3schools.com/bootstrap4/la.jpg" alt="Los Angeles">
-      </div>
-      <div class="carousel-item">
-        <img src="https://www.w3schools.com/bootstrap4/chicago.jpg" alt="Chicago">
-      </div>
-      <div class="carousel-item">
-        <img src="https://www.w3schools.com/bootstrap4/ny.jpg" alt="New York">
+        <div *ngFor="let newsdetail of news  let i = index" [class.active]="i == 0" class = "carousel-item">  
+        <img class="img-fluid" src="{{newsdetail.imagesUrls}}" alt="News Item">
+        <div class="carousel-caption">
+          <p><a href="{{newsdetail.articleUrls}}">{{newsdetail.captions}}</a></p>
+        </div>
       </div>
     </div>
   

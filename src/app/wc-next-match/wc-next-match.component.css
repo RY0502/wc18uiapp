@@ -1,7 +1,7 @@
 .teamnames {
     float: left;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 22px;
 }
 
@@ -51,7 +51,7 @@
 @media (min-width: 1200px) {
 
     .lgteamsp {
-        text-align: right;
+        text-align: center;
     }
 }
 
