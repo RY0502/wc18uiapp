@@ -9,5 +9,6 @@ export const environment = {
   nxtfixtureurl: 'getfixtures?match=next',
   lastfixtureurl: 'getfixtures?match=last',
   newsurl: 'getnews',
-  trendingvideosurl: 'gettrendingvideos'
+  trendingvideosurl: 'gettrendingvideos',
+  imglocation: '/assets/'
 };

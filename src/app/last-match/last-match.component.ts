@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WcLastMatchService } from '../wc-last-match.service';
 import { Observable } from 'rxjs/Observable';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-last-match',
@@ -34,14 +35,14 @@ export class LastMatchComponent implements OnInit {
       } else {
         finalName = teamHomeflag;
       }
-      this.teamHomeImagePath = '/assets/' + finalName + '.png';
+      this.teamHomeImagePath = environment.imglocation + finalName + '.png';
       const teamAwayflag = data.teamaway.split(' ');
       if ( teamAwayflag.length > 1) {
         finalName = teamAwayflag[0] + '_' + teamAwayflag[1];
       } else {
         finalName = teamAwayflag;
       }
-      this.teamAwayImagePath = '/assets/' + finalName + '.png';
+      this.teamAwayImagePath = environment.imglocation + finalName + '.png';
     });
   }
 

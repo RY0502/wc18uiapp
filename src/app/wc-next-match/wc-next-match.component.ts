@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, AfterContentInit } from '@angular/cor
 import { WcNextMatchService } from '../wc-next-match.service';
 import 'rxjs/add/observable/interval';
 import { Observable } from 'rxjs/Observable';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-wc-next-match',
@@ -34,14 +35,14 @@ export class WcNextMatchComponent implements OnInit {
       } else {
         finalName = teamHomeflag;
       }
-      this.teamHomeImagePath = '/assets/' + finalName + '.png';
+      this.teamHomeImagePath = environment.imglocation + finalName + '.png';
       const teamAwayflag = data.teamaway.split(' ');
       if ( teamAwayflag.length > 1) {
         finalName = teamAwayflag[0] + '_' + teamAwayflag[1];
       } else {
         finalName = teamAwayflag;
       }
-      this.teamAwayImagePath = '/assets/' + finalName + '.png';
+      this.teamAwayImagePath = environment.imglocation + finalName + '.png';
       this.updateTimer(); });
   }
 

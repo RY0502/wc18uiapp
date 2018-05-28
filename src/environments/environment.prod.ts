@@ -1,8 +1,9 @@
 export const environment = {
   production: true,
-  baseurl: 'http://default-environment.gvskmnzgqk.us-east-2.elasticbeanstalk.com/',
+  baseurl: 'http://wc18-env.pdxmkgppzx.us-east-1.elasticbeanstalk.com/',
   nxtfixtureurl: 'getfixtures?match=next',
   lastfixtureurl: 'getfixtures?match=last',
   newsurl: 'getnews',
-  trendingvideosurl: 'gettrendingvideos'
+  trendingvideosurl: 'gettrendingvideos',
+  imglocation: '/'
 };
