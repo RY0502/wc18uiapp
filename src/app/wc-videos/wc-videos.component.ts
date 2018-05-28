@@ -11,6 +11,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser
 export class WcVideosComponent implements OnInit {
 
   videos: Array<{id: String, title: String, channel: String, videourl: SafeUrl}>;
+  videourl: SafeUrl;
 
   constructor(private videosService: WcVideosService,
     private sanitizer: DomSanitizer) { }
@@ -25,6 +26,7 @@ export class WcVideosComponent implements OnInit {
         this.videos.push({id: element.id, title: element.title, channel: element.channelId, videourl: url});
       }
     });
+    this.videourl = 'https://www.youtube.com/results?search_query=fifa+world+cup+2018';
   }
 
   ngOnInit() {

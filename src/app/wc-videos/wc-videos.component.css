@@ -3,3 +3,10 @@
         padding-bottom: 7px !important;
     }
 }
+
+a {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 15px;
+    color: black;
+}
